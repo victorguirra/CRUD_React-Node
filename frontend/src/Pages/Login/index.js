@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import LoginImg from '../../Images/Login.svg'
 
 import { Wrapper, FirstContainer, SecondContainer } from './styles';
 
 function Login(){
+    const [ name, setName ] = useState('');
+    const [ nickname, setNickname ] = useState('');
+
+    function submitForm(event){
+        event.preventDefault();
+
+        console.log({
+            name,
+            nickname,
+        })
+    }
+
     return(
         <Wrapper>
 
@@ -20,19 +32,29 @@ function Login(){
 
                 <h2>Login Now</h2>
 
-                <form>
+                <form onSubmit={submitForm}>
 
                     <div className="formGroup">
 
                         <label htmlFor="name">Name:</label>
-                        <input type="text" placeholder="Name" id="name" />
+                        <input 
+                            type="text" 
+                            placeholder="Name" 
+                            id="name"
+                            onChange={text => setName(text.target.value) } 
+                        />
 
                     </div>
 
                     <div className="formGroup">
 
                         <label htmlFor="nickname">Nickname:</label>
-                        <input type="text" placeholder="Nickname" id="nickname" />
+                        <input 
+                            type="text" 
+                            placeholder="Nickname" 
+                            id="nickname"
+                            onChange={ text => setNickname(text.target.value) } 
+                        />
 
                     </div>
 
