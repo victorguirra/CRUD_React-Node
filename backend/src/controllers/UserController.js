@@ -3,7 +3,8 @@ const User = mongoose.model('User');
 
 module.exports = {
     async users(req, res) {
-        const Users = await User.find();
+        const { page = 1  } = req.query;
+        const Users = await User.paginate( {}, { page, limit:10 } );
 
         return res.json(Users);
     },
