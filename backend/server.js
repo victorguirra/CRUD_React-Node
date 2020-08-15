@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const requireDir = require('require-dir');
+const cors = require('cors');
 
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect('mongodb://localhost:27017/CRUD_React-Node', {
     useNewUrlParser: true,
@@ -15,6 +18,8 @@ mongoose.connect('mongodb://localhost:27017/CRUD_React-Node', {
     console.log(`Connection Error: ${error}`);
     
 })
+
+requireDir('./src/models');
 
 app.use('/', require('./src/routes'));
 
