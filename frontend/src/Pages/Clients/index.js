@@ -17,7 +17,7 @@ function Clients(){
             })
         }
         FetchData();
-    })
+    }, [])
 
     return(
         <Container>
