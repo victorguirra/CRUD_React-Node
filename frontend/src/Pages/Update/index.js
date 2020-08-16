@@ -28,7 +28,7 @@ function Register({user_id}){
             })
         }
         FetchData();
-    }, [])
+    }, [_id])
 
     function handleSubmitForm( event ){
         event.preventDefault();
