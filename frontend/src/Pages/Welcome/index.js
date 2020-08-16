@@ -14,22 +14,22 @@ function Welcome(){
             <ButtonsContainer>
 
                 <Link 
-                    to="/login" 
+                    to="" 
                     className="buttonLink" 
                     id="login"
                 >
 
-                    Fazer Login
+                    Verificar Clientes
 
                 </Link>
 
                 <Link 
-                    to="/register" 
+                    to="" 
                     className="buttonLink" 
                     id="register"
                 >
 
-                    Cadastrar-se
+                    Adicionar Novo Cliente
 
                 </Link>
 
