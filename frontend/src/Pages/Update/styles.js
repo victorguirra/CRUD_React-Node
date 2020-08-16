@@ -11,6 +11,13 @@ export const Container = styled.div`
 export const FormContainer = styled.div`
     width:40%;
 
+    @media (max-width:700px){
+        width:85%;
+    }
+    @media (min-width:701px) and (max-width:1220px){
+        width:65%;
+    }
+
     h1{
         color:#00ff74;
         margin-top:10px;
