@@ -36,6 +36,7 @@ export const FormContainer = styled.div`
         outline:0;
         padding:0 15px;
         margin-top:7px;
+        font-size:18px;
 
         &:focus{
             border:3px solid #00ff74;
