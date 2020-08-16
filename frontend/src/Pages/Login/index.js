@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom'
 import api from '../../Services/api';
 
@@ -10,23 +10,30 @@ function Login(){
     const [ name, setName ] = useState('');
     const [ nickname, setNickname ] = useState('');
 
-    const [ apiData, setApiData ] = useState([]);
+    const [ errorMessage, setErrorMessage ] = useState('');
 
     const history = useHistory();
 
     function submitForm(event){
         event.preventDefault();
 
-        api.get('users')
+        if( name === '' || nickname === '' ){
+            setErrorMessage('Please Fill All Fileds!');
+        }else{
+            api.get('users')
             .then(response => response.data)
             .then (data => data.docs)
             .then (docs => {
                 docs.map( user => {
                     if(user.name === name && user.nickname === nickname){
-                        history.push('/home')
-                    }
+                        history.push(`/home/${user._id}`);
+                    }else(
+                        setErrorMessage('Please Enter a Valid User')
+                    )
                 })
             })
+        }
+
     }
 
     return(
@@ -69,6 +76,8 @@ function Login(){
                         />
 
                     </div>
+
+                    <h4>{errorMessage}</h4>
 
                     <button type="submit">Enter</button>   
 

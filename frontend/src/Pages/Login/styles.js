@@ -82,6 +82,11 @@ export const SecondContainer = styled.div`
         color:#8356E5;
     }
 
+    h4{
+        margin-top:20px;
+        color:#ff1403;
+    }
+
     button{
         background-color:#04d362;
         color:#fff;
