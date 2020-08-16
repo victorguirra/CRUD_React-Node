@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Welcome from './Pages/Welcome';
 import Clients from './Pages/Clients';
 import Register from './Pages/Register';
-
+import Update from './Pages/Update';
 
 function Routes(){
     return(
@@ -15,6 +15,7 @@ function Routes(){
                 <Route path="/" exact={true} component={Welcome} />
                 <Route path="/clients" component={Clients} />
                 <Route path="/register" component={Register} />
+                <Route path="/update/:_id" component={Update} />
                 
             </Switch>
 

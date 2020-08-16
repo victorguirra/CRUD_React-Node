@@ -49,9 +49,9 @@ function Clients(){
 
                         <div className="footerOptions">
 
-                            <Link id="updateButton" className="linkButton">Update</Link>
+                            <Link to={`/update/${user._id}`} id="updateButton" className="linkButton">Update</Link>
 
-                            <Link id="deleteButton" className="linkButton">Delete</Link>
+                            <button id="deleteButton" className="linkButton">Delete</button>
 
                         </div>
 
