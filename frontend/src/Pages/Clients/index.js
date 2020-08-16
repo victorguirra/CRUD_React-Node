@@ -51,7 +51,7 @@ function Clients(){
 
                             <Link to={`/update/${user._id}`} id="updateButton" className="linkButton">Update</Link>
 
-                            <button id="deleteButton" className="linkButton">Delete</button>
+                            <Link to={`/delete/${user._id}`} id="deleteButton" className="linkButton">Delete</Link>
 
                         </div>
 

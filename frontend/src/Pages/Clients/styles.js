@@ -80,16 +80,11 @@ export const Option = styled.div`
             
             &:hover{
                 background-color:#0da150;
-                font-size:16px;
             }
         }
 
         #deleteButton{
             background-color:#ff1943;
-            border:none;
-            font-size:16px;
-            outline:0;
-            
 
             &:hover{
                 background-color:#d92e4c;
