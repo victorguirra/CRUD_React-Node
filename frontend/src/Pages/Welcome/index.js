@@ -14,9 +14,9 @@ function Welcome(){
             <ButtonsContainer>
 
                 <Link 
-                    to="" 
+                    to="/clients" 
                     className="buttonLink" 
-                    id="login"
+                    id="clients"
                 >
 
                     Verificar Clientes
@@ -24,7 +24,7 @@ function Welcome(){
                 </Link>
 
                 <Link 
-                    to="" 
+                    to="/register" 
                     className="buttonLink" 
                     id="register"
                 >
