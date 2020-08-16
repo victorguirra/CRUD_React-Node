@@ -91,6 +91,7 @@ export const SecondContainer = styled.div`
         font-size:20px;
         border-radius:8px;
         border:0;
+        outline:0;
         cursor:pointer;
         transition:0.4s;
 

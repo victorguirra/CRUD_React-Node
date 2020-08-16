@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom'
+import api from '../../Services/api';
 
 import LoginImg from '../../Images/Login.svg'
 
@@ -8,13 +10,23 @@ function Login(){
     const [ name, setName ] = useState('');
     const [ nickname, setNickname ] = useState('');
 
+    const [ apiData, setApiData ] = useState([]);
+
+    const history = useHistory();
+
     function submitForm(event){
         event.preventDefault();
 
-        console.log({
-            name,
-            nickname,
-        })
+        api.get('users')
+            .then(response => response.data)
+            .then (data => data.docs)
+            .then (docs => {
+                docs.map( user => {
+                    if(user.name === name && user.nickname === nickname){
+                        history.push('/home')
+                    }
+                })
+            })
     }
 
     return(
