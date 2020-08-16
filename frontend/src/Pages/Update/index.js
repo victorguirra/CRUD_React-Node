@@ -37,31 +37,43 @@ function Register({user_id}){
             api.put(`users/${_id}`, {
                 name,
             })
+            alert('Successfully Updated Client')
+            history.push('/clients')
         }
         if(surname !== ''){
             api.put(`users/${_id}`, {
                 surname,
             })
+            alert('Successfully Updated Client')
+            history.push('/clients')
         }
         if(email !== ''){
             api.put(`users/${_id}`, {
                 email,
             })
+            alert('Successfully Updated Client')
+            history.push('/clients')
         }
         if(address !== ''){
             api.put(`users/${_id}`, {
                 address,
             })
+            alert('Successfully Updated Client')
+            history.push('/clients')
         }
         if(nickname !== ''){
             api.put(`users/${_id}`, {
                 nickname,
             })
+            alert('Successfully Updated Client')
+            history.push('/clients')
         }
         if(imageURL !== ''){
             api.put(`users/${_id}`, {
                 imageURL,
             })
+            alert('Successfully Updated Client')
+            history.push('/clients')
         }    
     }
 
