@@ -19,7 +19,7 @@ function Welcome(){
                     id="clients"
                 >
 
-                    Verificar Clientes
+                    View Clients
 
                 </Link>
 
@@ -29,7 +29,7 @@ function Welcome(){
                     id="register"
                 >
 
-                    Adicionar Novo Cliente
+                    Add New Clients
 
                 </Link>
 
