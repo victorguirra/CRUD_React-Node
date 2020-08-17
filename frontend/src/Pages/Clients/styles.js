@@ -5,9 +5,48 @@ export const Container = styled.div`
     flex-direction:column;
     align-items:center;
 
-    h2{
-        color:#fff;
+    .header{
+        width:40%;
         margin-top:30px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+
+        @media (max-width:700px){
+        width:90%;
+        }
+        @media (min-width:701px) and (max-width:1024px){
+            width:75%;
+        }
+        @media (min-width:1025px) and (max-width:1220px){
+            width:50%;
+        }
+
+        .buttonAddNewClient{
+            background-color:#04d362;
+            color: #fff;
+            text-decoration:none;
+            width:50px;
+            height:50px;
+            border-radius:25px;
+            font-size:30px;
+            border:none;
+            outline:0;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            cursor:pointer;
+            transition:0.5s;
+
+            &:hover{
+                background-color:#0da150;
+            }
+        }
+    }
+
+    h2{
+        color:#fff; 
     }
 `;
 

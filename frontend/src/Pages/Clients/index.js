@@ -21,8 +21,14 @@ function Clients(){
 
     return(
         <Container>
+            
+            <div class="header">
 
             <h2>Your Clients</h2>
+
+            <Link to="/register"className="buttonAddNewClient">+</Link>
+
+            </div>
 
             <ClientsContainer>
 
