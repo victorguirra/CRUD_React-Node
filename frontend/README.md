@@ -1,68 +1,86 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align="center">
+    Cadastro de Clientes
+    <img src="https://image.flaticon.com/icons/svg/2883/2883885.svg" width="120">
+</h2>
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📔 Sobre
 
-### `yarn start`
+Neste projeto foi criado um sistema de registro de clientes bem simples, onde é possível realizar algumas operações;
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A idéia do projeto foi realizar uma aplicação FullStack, criando uma API no Backend, e consumindo os dados desta api no FrontEnd.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Nessa aplicação é possível listar os clientes, criar novos clientes, atualizá-los e deletá-los (basicamente um CRUD);
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔗 BackEnd 
 
-### `yarn build`
+No Backend desta aplicação, foi criado uma API Rest, com as seguintes tecnologias:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node JS
+- MongoDB
+- Express
+- Mongoose
+- CORS
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+A API está conectada a um banco MongoDB, e carrega dados do cliente para serem manipulados pelo Front End:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h2 align="center">
+    <img src="https://ik.imagekit.io/ur6xo9m70i/Api1_gRHVI7dsr.png" width="650">
+</h2>
 
-### `yarn eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 💻 Front End
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Já no Front End, foram usadas algumas tecnologias como:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- React JS
+- React Router Dom
+- Axios
+- Hooks
+- Styled Components
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Foi criada uma interface bem simples, para que possamos realizar manipulações com o cliente consumindo a API fornecida pelo BackEnd, utilizando os métodos do protocolo HTTP (GET, POST, PUT e DELETE):
 
-## Learn More
+<h2 align="center">
+    <img src="https://ik.imagekit.io/ur6xo9m70i/1_b_01lLY0PR.png" width="650">
+</h2>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### GET
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Utilizamos o método GET para exibir todos os clientes salvos em nosso banco de dados Mongo. Ao escolhermos a opção "View Clients" na tela inicial, seremos direcionado para a tela de listagem de clientes:
 
-### Code Splitting
+<h2 align="center">
+    <img src="https://ik.imagekit.io/ur6xo9m70i/2_k-H5XY0Zdb.png" width="650">
+</h2>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+#### POST
 
-### Analyzing the Bundle Size
+Utilizamos o método POST para adicionar novos registros em nosso banco de dados. Ao clicarmos no botão com um mais na tela de clientes, ou na opção "Add New Client", seremos direcionados para uma tela com um formulário, onde deveremos preencher com dados do cliente a ser adicionado:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+<h2 align="center">
+    <img src="https://ik.imagekit.io/ur6xo9m70i/3_xc3c5PXWX9.png" width="650">
+</h2>
 
-### Making a Progressive Web App
+#### PUT
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Utilizamos o método PUT para adicionar dados de um registro específico já existente em nosso banco de dados. Ao clicar na opção "Update" específica de um cliente, o usuário será direcionado para uma tela de formulário semelhante a primeira, porém com os dados atuais do registros já inseridos no campo, onde ele pode somente alterar o dado desejado e salvar:
 
-### Advanced Configuration
+<h2 align="center">
+    <img src="https://ik.imagekit.io/ur6xo9m70i/4_TYcGLmQ2jSz.png" width="650">
+</h2>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+#### DELETE
 
-### Deployment
+Utilizamos o método DELETE para deleter um registro específico de nosso banco de dados. Ao clicar na opção "Delete" específica de um cliente, o usuário será direcionado para uma tela de confirmação, onde ele irá verificar se quer realmente deletar o usuário. Caso realmente queira, o usuário será deletado:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+<h2 align="center">
+    <img src="https://ik.imagekit.io/ur6xo9m70i/5_OPOtZbzSkY.png" width="650">
+</h2>
 
-### `yarn build` fails to minify
+--- 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<h2 align="center">💻 Desenvolvido Por: Victor Guirra</h2>
