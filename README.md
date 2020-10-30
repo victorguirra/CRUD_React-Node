@@ -9,9 +9,9 @@
 
 Neste projeto foi criado um sistema de registro de clientes bem simples, onde é possível realizar algumas operações;
 
-A idéia do projeto foi realizar uma aplicação FullStack, criando uma API no Backend, e consumindo os dados desta api no FrontEnd.
+A idéia do projeto foi realizar uma aplicação FullStack, criando uma API no Backend, e consumindo os dados desta api no FrontEnd;
 
-Nessa aplicação é possível listar os clientes, criar novos clientes, atualizá-los e deletá-los (basicamente um CRUD);
+Nessa aplicação é possível listar os clientes, criar novos clientes, atualizá-los e deletá-los (basicamente um CRUD).
 
 ---
 
